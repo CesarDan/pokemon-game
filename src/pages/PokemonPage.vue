@@ -18,7 +18,8 @@ export default {
         components: {PokemonOptions, PokemonPicture},
         data() {
             return {
-                pokemonArr:[]
+                pokemonArr:[],
+                pokemon: null
             }
         },
         methods: {
