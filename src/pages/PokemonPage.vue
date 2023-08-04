@@ -3,8 +3,8 @@
    <!--TODO: PICTURE (IMG-->
 
    <!--TODO: OPCIONES-->
-   <PokemonPicture :pokemonId="151" :showPokemon="true"></PokemonPicture>
-   <PokemonOptions />
+   <PokemonPicture :pokemonId="151" :showPokemon="true"/>
+   <PokemonOptions :pokemons="pokemonArr" />
 </template>
 
 
@@ -15,7 +15,22 @@ import getPokemonOptions from '@/helpers/getPokemonOptions'
 
 //console.log(getPokemonOptions());
 export default {
-        components: {PokemonOptions, PokemonPicture}
+        components: {PokemonOptions, PokemonPicture},
+        data() {
+            return {
+                pokemonArr:[]
+            }
+        },
+        methods: {
+            async mixPokemonArray() {
+                this.pokemonArr = await getPokemonOptions()
+                console.log(this.pokemonArr);
+            }
+        },
+        mounted(){
+           this.mixPokemonArray()
+        }
+
     }
 </script>
 
