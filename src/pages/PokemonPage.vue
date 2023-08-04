@@ -1,5 +1,5 @@
 <template>
-   <h1>¿Quién es éste pokemon xD?</h1>
+   <h1>¿QUIÉN ES ÉSTE POKEMON?</h1>
    <!--TODO: PICTURE (IMG-->
 
    <!--TODO: OPCIONES-->
