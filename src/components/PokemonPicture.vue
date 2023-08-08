@@ -1,12 +1,15 @@
 <template>
  <div class="pokemon-container">
-<img :src="imgSrc"
+    <img v-if="!showPokemon"
+    :src="imgSrc"
     class="hidden-pokemon"
     alt="pokemon">
-<img v-if="showPokemon" 
+
+    <img v-else
      :src="imgSrc" 
     class="fade-in" 
     alt="pokemon">
+
 </div>
 </template>
 //Number required
@@ -37,6 +40,7 @@
 }
 img {
   height: 200px;
+  position: absolute;
   width: 100vw;
   margin-left: -50vw;
   user-select: none;
